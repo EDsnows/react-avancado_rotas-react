@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 
 async function getPosts() {
+    // atenção a qual porta estar sendo feita o fetch para evitar o erro de "Unhandled Rejection (TypeError): Failed to fetch"
     const response = await fetch('http://localhost:3000/json/posts.json');
     return await response.json();
 }
