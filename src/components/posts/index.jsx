@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import {useEffect, useState} from 'react';
+import {Link} from 'react-router-dom';
 
 async function getPosts() {
     // atenção a qual porta estar sendo feita o fetch para evitar o erro de "Unhandled Rejection (TypeError): Failed to fetch"
@@ -34,9 +34,4 @@ const PostsList = () => {
     );
 };
 
-export { PostsList };
-
-
-const mensagemMundo = () => {
-    console.log('olá mundo')
-}
+export {PostsList};
