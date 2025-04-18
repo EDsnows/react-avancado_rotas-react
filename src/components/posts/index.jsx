@@ -1,5 +1,4 @@
-import {useEffect, useState} from 'react';
-import {Link} from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 async function getPosts() {
     // atenção a qual porta estar sendo feita o fetch para evitar o erro de "Unhandled Rejection (TypeError): Failed to fetch"
@@ -24,14 +23,12 @@ const PostsList = () => {
             {posts.map((post, index) => (
                 // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                 <div key={index}>
-                    <Link to={`/post/${post.id}`}>
-                        <img src={post.image} alt='' />
-                        <h2>{post.title}</h2>
-                    </Link>
+                    <img src={post.image} alt='' />
+                    <h2>{post.title}</h2>
                 </div>
             ))}
         </section>
     );
 };
 
-export {PostsList};
+export { PostsList };
