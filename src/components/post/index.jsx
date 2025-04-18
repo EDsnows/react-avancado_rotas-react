@@ -7,7 +7,7 @@ async function getPost(id) {
 }
 
 const PostDetails = () => {
-    const [post, setPost] = useState();
+    const [post, setPost] = useState({});
 
     const { id } = useParams()
 
